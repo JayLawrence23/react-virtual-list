@@ -1,20 +1,17 @@
-'use client';
-import React, { ReactNode } from 'react';
+"use client";
+import React, { ReactNode } from "react";
 
-import { Container } from '@/components/layout';
-import { CardSkeletonGroup } from '@/components/skeletons';
-import { useFetchUsers } from '@/hooks/use-query';
+import { CardSkeletonGroup } from "@/components/skeletons";
+import { useFetchUsers } from "@/hooks/use-query";
 
-import { LoadMore, Footer, Header, Card } from '@/main';
+import { LoadMore, Footer, Card } from "@/home";
 
 const Main = () => {
   const { disabled, pagination, setPagination, isLoading, users } =
     useFetchUsers();
 
   return (
-    <Container maxWidth='7xl'>
-      <Header />
-
+    <>
       {/* PASS USERS DATA TO CARD */}
       <CardContainer>
         {users.length === 0 ? (
@@ -38,7 +35,7 @@ const Main = () => {
       />
 
       {disabled && <Footer />}
-    </Container>
+    </>
   );
 };
 

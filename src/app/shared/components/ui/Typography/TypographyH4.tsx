@@ -1,18 +1,18 @@
-import { VariantProps, cva } from 'class-variance-authority';
-import react, { ReactNode } from 'react';
+import { VariantProps, cva } from "class-variance-authority";
+import react, { ReactNode } from "react";
 
 const heading = cva(
-  'scroll-m-20 text-text-lg lg:text-xl font-medium tracking-tigh',
+  "scroll-m-20 text-primary font-bold text-lg lg:text-xl font-medium tracking-tigh",
   {
     variants: {
       variant: {
-        primary: '',
-        secondary: 'text-gray-700/70 dark:text-white',
-        black: 'text-black',
+        primary: "",
+        secondary: "text-gray-700/70 dark:text-white",
+        black: "text-black",
       },
     },
     defaultVariants: {
-      variant: 'primary',
+      variant: "primary",
     },
   }
 );
